@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+@using LoginForm.Models;
+
+
+<h2 style="margin-left:600px">Login</h2>
+<div>
+    <form action="~/Login/verify" method="post">
+     <input type="text" placeholder="Username" id="us" required="required" name="us" style="margin-left:550px" /><br />
+    <input type="password" placeholder="password" name="pass" id="pass" style="margin-left:550px" /> <br />
+    <div id="result"></div>
+     <input type="submit" value="Login" style="margin-left:600px" /> <br />
+
+          </form>
+   
+</div>
+
+
+
+
+@*<body>
+    <form action="~/Login/verify/@TempData["id"]" method="post">
+        <input type="text" placeholder="Username" id="us" required="required" name="us" />
+        <input type="password" placeholder="Password" id="pass" required="required" name="pass" /> <input type="button" value="verify Password" id="b1" />
+         <div id="result"></div>
+        <input type="submit" value="Login" />
+
+
+       
+    <script>
+
+        $(document).ready(function () {
+
+            $('#checking').hide();
+
+          
+            $('#b1').click(function () {
+
+                var pass = $('#pass').val();
+
+                //alert('User Name ='+ userName);
+                $('#checking').show();
+                $.getJSON("~/Login/verifyPassword?Password=" + pass, function (data) {
+                    $('#checking').hide();
+                    if (data < 4) {
+                        $('#result').text("Password Too Short !! Please Update your Password");
+
+                    }
+                    else {
+                        $('#result').text("Password is ok");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+    </form>
+
+</body>*@
